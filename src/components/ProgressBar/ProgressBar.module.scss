@@ -1,0 +1,89 @@
+.ProgressBar {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.Cell {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  flex-grow: 1;
+  position: relative;
+
+  &.Active {
+    .Circle {
+      background-color: var(--primary-theme-color);
+      border-color: var(--primary-theme-color);
+      color: #ffffff;
+    }
+
+    &::before,
+    &::after {
+      background-position: left bottom;
+    }
+  }
+
+  &.Done {
+    .Circle {
+      cursor: pointer;
+    }
+  }
+
+  .Circle {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e7eaf3;
+    color: #898c98;
+    cursor: default;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.1s linear, border-color 0.1s linear;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    background: linear-gradient(
+      to left,
+      #e7eaf3 50%,
+      var(--primary-theme-color) 50%
+    );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 200ms ease-in-out;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &:first-child::before {
+    content: none;
+  }
+
+  &:last-child::after {
+    content: none;
+  }
+}

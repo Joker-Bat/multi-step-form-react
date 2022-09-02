@@ -1,0 +1,33 @@
+.App {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 80px;
+  pointer-events: none;
+
+  h1 {
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+}
+
+.ProgressBar {
+  width: 75%;
+  margin-bottom: 80px;
+}
+
+.Form {
+  width: 100%;
+}

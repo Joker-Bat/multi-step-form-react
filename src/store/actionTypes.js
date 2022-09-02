@@ -1,0 +1,4 @@
+export const UPDATE_POSITION = "UPDATE_POSITION";
+export const UPDATE_DETAILS = "UPDATE_DETAILS";
+export const UPDATE_STEPS = "UPDATE_STEPS";
+export const NEXT_POSITION = "NEXT_POSITION";
