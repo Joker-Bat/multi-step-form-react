@@ -41,7 +41,7 @@ function App() {
       </div>
 
       <div className={classes.ProgressBar}>
-        <ProgressBar totalLength={states.length} />
+        <ProgressBar />
       </div>
 
       <div className={classes.Form}>{states[currentPosition].component}</div>
